@@ -347,7 +347,7 @@
 
 <script>
     // 每天切换 banner 图.  Switch banner image every day.
-    $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getMinutes() + '.jpg)');
+    $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay() + '.jpg)');
 </script>
 
 
@@ -789,6 +789,46 @@
 </script>
                 
 
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <div class="card-content article-card-content">
+                        <div class="title center-align" data-aos="zoom-in-up">
+                            <i class="fa fa-address-book"></i>&nbsp;&nbsp;myCV
+                        </div>
+                        <div id="articleContent" data-aos="fade-up">
+                            <p>#教育经历</p>
+<ul>
+<li><b>本科生 管理学院统计专业</b><br>中国科学技术大学<br>2019/08-现在</li>
+</ul>
+<h1 id="联系方式"><a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><ul>
+<li><b>电子邮箱</b><br><a href="mailto:hjz346594825@mail.ustc.edu.cn">hjz346594825@mail.ustc.edu.cn</a><br><a href="mailto:346594825@qq.com">346594825@qq.com</a></li>
+<li><b>地址</b><br>中国科学技术大学中区5号楼，邮编230026</li>
+<li><b>微信</b><br>iTsinghua2018</li>
+<li><b>QQ</b><br>346594825</li>
+</ul>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+                        </div>
+                </div>
             </div>
         </div>
     </div>
