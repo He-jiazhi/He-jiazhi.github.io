@@ -347,6 +347,13 @@
 
 <div class="carousel carousel-slider center index-cover" data-indicators="true" style="margin-top: -64px;">
     
+        <div id="prev-cover" class="left waves-effect carousel-control">
+            <i class="icon fa fa-angle-left"></i>
+        </div>
+        <div id="next-cover" class="right waves-effect carousel-control">
+            <i class="icon fa fa-angle-right"></i>
+        </div>
+    
 
     <div class="carousel-item red white-text bg-cover about-cover">
         <div class="container">
@@ -445,6 +452,32 @@
     </div>
 
     
+        
+
+        
+            
+            <div class="carousel-item amber white-text carousel-post bg-cover"
+                 style="background-image: url('/medias/featureimages/2.jpg');">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s10 offset-s1">
+                            <div class="title center-align">平面束方程</div>
+                            <div class="description center-align">
+                                
+                                    Proof and Application of Equation 0f Plane Pencil
+                                
+                            </div>
+                            <div class="cover-btns">
+                                <a href="/posts/8b68.html" class="waves-effect waves-light btn" target="_blank">
+                                    <i class="icon fa fa-eye fa-fw"></i>Read more
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+    
 </div>
 
 <script>
@@ -484,7 +517,7 @@
         let autoCarousel = function() {
             carouselIntervalId = setInterval(function () {
                 coverSlider.carousel('next');
-            }, 50);
+            }, 5000);
         };
         autoCarousel();
         
