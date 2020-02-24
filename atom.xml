@@ -6,15 +6,43 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/He-jiazhi/He-jiazhi.github.io/"/>
-  <updated>2020-02-23T03:39:38.429Z</updated>
+  <updated>2020-02-24T10:04:25.160Z</updated>
   <id>https://github.com/He-jiazhi/He-jiazhi.github.io/</id>
   
   <author>
-    <name>He-jiazhi</name>
+    <name>何家志</name>
     
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>平面束方程</title>
+    <link href="https://github.com/He-jiazhi/He-jiazhi.github.io/posts/8b68.html"/>
+    <id>https://github.com/He-jiazhi/He-jiazhi.github.io/posts/8b68.html</id>
+    <published>2020-02-24T07:23:23.000Z</published>
+    <updated>2020-02-24T10:04:25.160Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;时间过得很快，网课都已经上一周了，大家对于这种授课方式体验如何呢?&lt;br&gt;&lt;del&gt;我相信，不管在那里，大家都是热爱学习的。&lt;/del&gt;&lt;br&gt;好了，废话不多说，进入正题，今天分享一下陈卿老师留的思考题。&lt;/p&gt;
+&lt;h2 id=&quot;平面束方程&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="数学" scheme="https://github.com/He-jiazhi/He-jiazhi.github.io/categories/%E6%95%B0%E5%AD%A6/"/>
+    
+    
+      <category term="空间解析几何" scheme="https://github.com/He-jiazhi/He-jiazhi.github.io/tags/%E7%A9%BA%E9%97%B4%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
