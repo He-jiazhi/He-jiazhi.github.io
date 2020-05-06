@@ -4,56 +4,6 @@
   
     
     <entry>
-      <title>多变量微积分</title>
-      <link href="/posts/82e6.html"/>
-      <url>/posts/82e6.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>第三周又要接近尾声啦，疫情似乎真的让人每天在家过得昏天黑地忘记了时间得流逝，只有开学和各种DDL忠实地守候着日期不离不弃。</p><p>尽管身后就是温暖被窝的诱惑，面对眼前DDL的威胁，只好毅然掏出一本日历开始新学期干锅生活。</p><p>码两题</p><h3 id="2010年中国科大“多变量微积分”期中试题"><a href="#2010年中国科大“多变量微积分”期中试题" class="headerlink" title="2010年中国科大“多变量微积分”期中试题"></a>2010年中国科大“多变量微积分”期中试题</h3><blockquote><p>设函数$f(u) $具有二阶连续导数，函数$z=f(e^x siny)  $满足方程<br>$$\frac{\partial^2 z} {\partial x^2} +\frac{\partial^2 z} {\partial y^2}=(z+1)e^{2x}$$<br>求$f(u)  $所满足的常微分方程。</p></blockquote><p>解：令$u=e^x siny  $<br>则$$ \frac{\partial z} {\partial x}=f’(u)e^x siny $$<br>$$\frac{\partial^2 z} {\partial x^2}=f’’(u)(e^x siny)^2+f’(u)e^x siny  \tag{1} $$<br>$$\frac{\partial z} {\partial y}=f’(u)e^x cosy $$<br>$$\frac{\partial^2 z} {\partial y^2}=f’’(u)(e^x cosy)^2-f’(u)e^x siny  \tag{2}$$<br>将(1)式和(2)式代入已知方程得$f(u)  $所满足的常微分方程<br>$$f’’(u)-f(u)-1=0 $$</p><p>这题显然不能满足大家需求，再来一题。</p><h3 id="2011年中国科大“多变量微积分”期中试题"><a href="#2011年中国科大“多变量微积分”期中试题" class="headerlink" title="2011年中国科大“多变量微积分”期中试题"></a>2011年中国科大“多变量微积分”期中试题</h3><blockquote><p>设$z=z(x,y) $具有二阶连续偏导数，令$u=x+ay,v=x+by  $,则方程<br>$$\frac{\partial^2 z} {\partial x^2}+4\frac{\partial^2 z} {\partial x \partial y}+3\frac{\partial^2 z} {\partial y^2}=0  $$<br>变为 $$\frac{\partial^2 z} {\partial u \partial v}=0 $$<br>求常数$a,b  $的值。</p></blockquote><p>解：把$u,v  $作为中间变量，$x,y  $作为自变量，将$z’’_x,z’_{yx},z’’_y  $用关于$u,v  $的偏导数表示，再带入原方程化简。由复合函数的求导法则可得</p><p>$z’_x=z’_uu’_x+z’_vv’_x=z’_u+z’_v  $<br>$z’_y=z’_uu’_y+z’_vv’_y=az’_u+bz’_v $<br>$z’’_{yy}=a(z’’_{uu}u’_y+z’’_{uv}v’_y)+b(z’’_{vu}u’_y+z’’_{vv}v’_y)=a^2z’’_{uu}+2abz’’_{uv}+b^2z’’_{vv}  $<br>$z’’_{yx}=a(z’’_{uu}u’_x+z’’_{uv}v’_x)+b(z’’_{vu}u’_x+z’’_{vv}v’_x)=az’’_{uu}+(a+b)z’’_{uv}+bz’’_{vv} $<br>$z’’_{xx}=z’’_{uu}+2z’’_{uv}+z’’_{vv} $<br>将这些表达式代入原方程化简得<br>$(1+3a^2+4a)z’’_{uu}+(2+6ab+4a+4b)z’’_{uv}+(1+3b^2+4b)z’’_{vv}=0 $<br>因此<br>$$<br>\left \{<br>\begin{array}{c}<br>1+3a^2+4a=0 \\<br>1+3b^2+4b=0 \\<br>2+6ab+4a+4b\ne0<br>\end{array}<br>\right.<br>$$<br>解得 $a=-1,b=-\frac{1}{3}或a=-\frac{1}{3},b=-1  $</p><p>可能有计算错误，请指出。</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-      
-      
-      <categories>
-          
-          <category> 数学 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 数学分析 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>平面束方程</title>
-      <link href="/posts/8b68.html"/>
-      <url>/posts/8b68.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&amp;id=1346281717&amp;auto=1&amp;height=66"></iframe><p>时间过得很快，网课都已经上一周了，大家对于这种授课方式体验如何呢?<br><del>我相信，不管在那里，大家都是热爱学习的。</del><br>好了，废话不多说，进入正题，今天分享一下陈卿老师留的思考题。</p><h2 id="平面束方程"><a href="#平面束方程" class="headerlink" title="平面束方程"></a>平面束方程</h2><p>已知直线$\mathbb{L}:$<br>$$\left \{<br>\begin{array} {c}<br>a_1x+b_1y+c_1z+d_1=0    &amp;\text{(1)} \<br>a_2x+b_2y+c_2z+d_2=0    &amp;\text{(2)}<br>\end{array}<br>\right.$$<br>求过$\mathbb{L}$的平面$\pi$方程的表达式。</p><p><font color="red" size="5px">解</font>:  （1）$代数法：<br> 设\pi的方程：ax+by+cz+d=0。则由题意方程组$<br>$$\left \{<br>\begin{array} {c}<br>a_1x+b_1y+c_1z+d_1=0    &amp;\text{(1)}\\<br>a_2x+b_2y+c_2z+d_2=0    &amp;\text{(2)}<br>\end{array}<br>\right.$$<br>$与方程组$<br>$$\left \{<br>\begin{array} {c}<br>a_1x+b_1y+c_1z+d_1=0 &amp;\text{(1)} \<br>a_2x+b_2y+c_2z+d_2=0 &amp;\text{(2)} \<br>ax+by+cz+d=0<br>\end{array}<br>\right.$$ $同解$<br>$由于两个线性方程组同解且(a_1,b_1,c_1)与(a_2,b_2,c_2)线性无关$<br>$则平面\pi的方程是方程（1）和（2）的线性组合$<br>$即\pi的方程是(\lambda a_1+\nu a_2)x+(\lambda b_1+\nu b_2)y+(\lambda c_1+\nu c_2)z+\lambda d_1+\nu d_2=0 且(\lambda,\nu) \neq(0,0) $</p><p>（2）$几何法：\vec n_1=(a_1,b_1,c_1),\vec n_2=(a_2,b_2,c_2),\vec n=(a,b,c)$<br>$\mathbb{L}的方向向量为\vec n_1\times \vec n_2$,$\mathbb{L}\subset \pi \Rightarrow \vec n_1\times \vec n_2\cdot \vec n=0  $<br>$注意\vec n_1与\vec n_2线性无关，则存在不全为0的实数\lambda，\nu使得\vec n=\lambda \vec n_1+\nu \vec n_2$<br>$\pi的方程是(\lambda a_1+\nu a_2)x+(\lambda b_1+\nu b_2)y+(\lambda c_1+\nu c_2)z+d=0 $<br>$如何求d？取P_0=(x_0,y_0,z_0)\in\mathbb{L} \Rightarrow P_0 \in \pi 带入以上三道方程即得解d=\lambda d_1+\nu d_2$</p><p>写到这里发现打mathjax好累<br>光说不练肯定是不行的，好心的我还是再附一道练习题吧。</p><h2 id="应用举例"><a href="#应用举例" class="headerlink" title="应用举例"></a>应用举例</h2><p>例： 求过直线$\mathbb{L}$:$\left \{<br>\begin{array} {c}<br>x+y+1&amp;=0 &amp;\text{(1)}  \<br>x-y&amp;=0   &amp;\text{(2)}<br>\end{array} \}<br>\right.$且与平面$\pi:2x+y-\sqrt5z=0$成$\frac \pi3$角的平面方程。<br><font color="red" size="5px">解</font>: $过直线\mathbb{L}的平面束方程为$<br>$$x+y+1+\lambda(x-y)=0$$<br>即$$(\lambda+1)x+(1-\lambda)y+1=0$$<br>$其法线向量是\vec n_1=(\lambda+1,1-\lambda,0).平面\pi的法线向量是\vec n_2=(2,1,-\sqrt5) 所求平面与平面\pi成\frac \pi3角，有$<br>$$cos\frac \pi3= \frac{\lvert\vec n_1\cdot\vec n_2\rvert} {\lvert\vec n_1\rvert\lvert\vec n_2\rvert}  $$<br>$即$<br>$$cos\frac \pi3= \frac{\lvert2(1+\lambda)+(1-\lambda)\rvert} {\sqrt{(1+\lambda)^2+(1-\lambda)^2} \sqrt{2^2+1^2+(-\sqrt{5}^2)} }=\frac 12 $$<br>$记得\lambda=2或-\frac 12$<br>$故所求平面方程为$<br>$$3x-y+1=0或x+3y+2=0$$</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-      
-      
-      <categories>
-          
-          <category> 数学 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 空间解析几何 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Hello World</title>
       <link href="/posts/3eeb.html"/>
       <url>/posts/3eeb.html</url>

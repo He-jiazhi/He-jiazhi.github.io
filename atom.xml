@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/He-jiazhi/He-jiazhi.github.io/"/>
-  <updated>2020-03-05T14:15:13.412Z</updated>
+  <updated>2020-02-24T10:38:37.541Z</updated>
   <id>https://github.com/He-jiazhi/He-jiazhi.github.io/</id>
   
   <author>
@@ -15,60 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>多变量微积分</title>
-    <link href="https://github.com/He-jiazhi/He-jiazhi.github.io/posts/82e6.html"/>
-    <id>https://github.com/He-jiazhi/He-jiazhi.github.io/posts/82e6.html</id>
-    <published>2020-03-05T13:00:00.000Z</published>
-    <updated>2020-03-05T14:15:13.412Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="数学" scheme="https://github.com/He-jiazhi/He-jiazhi.github.io/categories/%E6%95%B0%E5%AD%A6/"/>
-    
-    
-      <category term="数学分析" scheme="https://github.com/He-jiazhi/He-jiazhi.github.io/tags/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>平面束方程</title>
-    <link href="https://github.com/He-jiazhi/He-jiazhi.github.io/posts/8b68.html"/>
-    <id>https://github.com/He-jiazhi/He-jiazhi.github.io/posts/8b68.html</id>
-    <published>2020-02-24T07:23:23.000Z</published>
-    <updated>2020-03-01T13:20:34.700Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="数学" scheme="https://github.com/He-jiazhi/He-jiazhi.github.io/categories/%E6%95%B0%E5%AD%A6/"/>
-    
-    
-      <category term="空间解析几何" scheme="https://github.com/He-jiazhi/He-jiazhi.github.io/tags/%E7%A9%BA%E9%97%B4%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/"/>
-    
-  </entry>
   
   <entry>
     <title>Hello World</title>
