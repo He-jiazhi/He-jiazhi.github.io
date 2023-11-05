@@ -1,11 +1,11 @@
 ---
 layout: page
-title: projects
+title: Projects
 permalink: /projects/
 description: I will update some my cool projects later.
 nav: ture
-nav_order: 2
-display_categories: [work, fun]
+nav_order: 3
+display_categories: [application, theory]
 horizontal: false
 ---
 

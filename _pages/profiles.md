@@ -4,7 +4,7 @@ permalink: /Friends/
 title: Friends
 description: Fortunate to be friends with them :)
 nav: true
-nav_order: 6
+nav_order: 5
 
 ---
 

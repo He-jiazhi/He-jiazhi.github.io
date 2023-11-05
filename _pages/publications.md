@@ -1,10 +1,10 @@
 ---
 layout: page
 permalink: /publications/
-title: publications
+title: Publications
 description: Hope I have one soon!
 nav: true
-nav_order: 1
+nav_order: 2
 ---
 <!-- _pages/publications.md -->
 
