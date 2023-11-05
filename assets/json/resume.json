@@ -24,12 +24,12 @@
   },
   "work": [
     {
-      "name": "",
+      "name": "Undergraduate Research Assistant",
       "position": "",
       "url": "",
-      "startDate": "",
-      "endDate": "",
-      "summary": "",
+      "startDate": "2022-01",
+      "endDate": "2022-06",
+      "summary": "Make Evaluation of personal health status in cloud medical and big data environment.",
       "highlights": [
         ""
       ]
@@ -44,10 +44,7 @@
       "studyType": "PhD",
       "startDate": "2023",
       "endDate": "",
-      "score": "",
-      "courses": [
-        ""
-      ]
+      "score": ""
     },
     {
       "institution": "University of Science and Technology of China",
@@ -55,11 +52,8 @@
       "area": "Mathematics and Applied Mathematics",
       "studyType": "Bachelor of Science",
       "startDate": "2019",
-      "endDate": "",
-      "score": "",
-      "courses": [
-        ""
-      ]
+      "endDate": "2023",
+      "score": ""
     }
   ],
   "awards": [
@@ -70,10 +64,10 @@
       "summary": ""
     },
     {
-      "title": "Outstanding Student Scholarship, Silver Award (Top 10%)",
+      "title": "Outstanding Student Scholarship, Silver Award",
       "date": "2020",
       "awarder": "University of Science and Technology of China",
-      "summary": ""
+      "summary": "Top 10%"
     },
     {
       "title": "Outstanding Academic Progress Scholarship",
@@ -82,10 +76,10 @@
       "summary": ""
     },
     {
-      "title": "Outstanding Freshmen Scholarship, Bronze Award (Top 20%)",
+      "title": "Outstanding Freshmen Scholarship, Bronze Award",
       "date": "2019",
       "awarder": "University of Science and Technology of China",
-      "summary": ""
+      "summary": "Top 20%"
     },
     {
       "title": "China Senior High School Mathematics Competition, Second Prize in Anhui Province",
