@@ -3,7 +3,7 @@ layout: page
 title: projects
 permalink: /projects/
 description: I will update some my cool projects later.
-nav: true
+nav: ture
 nav_order: 2
 display_categories: [work, fun]
 horizontal: false
