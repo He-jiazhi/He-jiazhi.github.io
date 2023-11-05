@@ -2,11 +2,17 @@
 layout: page
 permalink: /teaching/
 title: teaching
-description: Materials for courses you taught. Replace this text with your description.
+description: TA actually :)
 nav: true
 nav_order: 5
 ---
 
-For now, this page is assumed to be a static description of your courses. You can convert it to a collection similar to `_projects/` so that you can have a dedicated page for each course.
+## University of Pittsburgh
 
-Organize your courses by years, topics, or universities, however you like!
+Fall 2023, teaching assistant for Applied Nonparametric Statistics (STAT 1201/2200, Credit: 3, 51 students, Instructor: [Yeon-Jung Seo](https://www.stat.pitt.edu/people/yeon-jung-seo)) and Statistics in the Modern World (STAT 0800, Credit: 3, 57 students, Instructor: [Ruth Mihalyi](https://www.stat.pitt.edu/people/ruth-mihalyi))
+
+## University of Science and Technology of China
+
+Fall 2022, teaching assistant for Mathematical Statistics (MATH3005) (Credit: 3, Class for juniors: 143 students, Instructor: Dr. Xiaohong Lan, School of Mathematical Sciences, USTC)
+
+Spring 2022, teaching assistant for Linear Algebra B1 (MATH1009) (Credit: 4, Class for freshmen: 122 students, Instructor: [Dr. Jue Le](http://staff.ustc.edu.cn/~juele/), School of Mathematical Sciences, USTC)
