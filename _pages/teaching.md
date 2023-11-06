@@ -9,7 +9,7 @@ nav_order: 4
 
 ### University of Pittsburgh
 
-- Fall 2023, teaching assistant for `Applied Nonparametric Statistics (STAT 1201/2200)` (Instructor: [Yeon-Jung Seo](https://www.stat.pitt.edu/people/yeon-jung-seo)) and `Statistics in the Modern World (STAT 0800)` (Instructor: [Ruth Mihalyi](https://www.stat.pitt.edu/people/ruth-mihalyi))
+- Fall 2023, teaching assistant for `Applied Nonparametric Statistics (STAT 1201/2200)` (Instructor: [Dr. Yeon-Jung Seo](https://www.stat.pitt.edu/people/yeon-jung-seo)) and `Statistics in the Modern World (STAT 0800)` (Instructor: [Ruth Mihalyi](https://www.stat.pitt.edu/people/ruth-mihalyi))
 
 ### University of Science and Technology of China
 
