@@ -2,7 +2,7 @@
 layout: page
 title: Projects
 permalink: /projects/
-description: I will update some my cool projects later.
+description: A growing collection of my cool projects.
 nav: ture
 nav_order: 3
 display_categories: [application, theory]
