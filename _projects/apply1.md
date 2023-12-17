@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Analysis of HIV Drug Resistance Data
+title: Analysis of      HIV Drug Resistance 
 description: STAT 2131 Course Final Project at Pitt
 img: assets/img/apply1_1.png
 importance: 1
@@ -19,4 +19,18 @@ To simplify the analysis, in this project we will confine our attention to the P
 
 ```{r}
 drug_class = 'PI' # Possible drug types are 'PI', 'NRTI', and 'NNRTI'
+```
+
+## Fetching and cleaning the data
+
+First, we download the data and read it into data frames.
+
+```{r}
+base_url = 'http://hivdb.stanford.edu/_wrapper/pages/published_analysis/genophenoPNAS2006'
+gene_url = paste(base_url, 'DATA', paste0(drug_class, '_DATA.txt'), sep='/')
+tsm_url = paste(base_url, 'MUTATIONLISTS', 'NP_TSM', drug_class, sep='/')
+
+gene_df = read.delim(gene_url, na.string = c('NA', ''), stringsAsFactors = FALSE)
+tsm_df = read.delim(tsm_url, header = FALSE, stringsAsFactors = FALSE)
+names(tsm_df) = c('Position', 'Mutations')
 ```
