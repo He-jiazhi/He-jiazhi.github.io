@@ -181,7 +181,8 @@ head(gene_df, n=6)
 </tbody>
 </table>
 
-\\
+$$ $$
+
 ```{r}
 head(tsm_df, n=6)
 ```
@@ -250,7 +251,7 @@ $$
  Y_{i,k} = \text{resistance of patient } i \text{ to drug } k. 
 $$
 
-For example, in the sample for PI type drugs, three different mutations (A, C, and D) are observed at position 63 in the protease, and so three columns of $X$ (named P63.A, P63.C, and P63.D) indicate the presence or absence of each mutation at this position.
+For example, in the sample for PI type drugs, three different mutations (A, C, and D) are observed at position 63 in the protease, and so three columns of $$X$$ (named P63.A, P63.C, and P63.D) indicate the presence or absence of each mutation at this position.
 
 ```{r}
 # Flatten a matrix to a vector with names from concatenating row/column names.
@@ -571,6 +572,8 @@ for(i in 1:7){
 cat(pi_drug_names[i], ":", results[[i]], "\n\n")}
 ```
 
+The output is
+
 ```{r}
 APV : P84.A P84.C P10.F P33.F P82.F P10.I P46.I P50.L P54.L P54.M P90.M P88.S P10.V P47.V P50.V P76.V P84.V 
 
@@ -627,6 +630,7 @@ for (i in seq_along(Y)) {
 }
 ```
 
+The output is
 
 ```{r}
 Drug: APV 
@@ -688,7 +692,7 @@ In this part, we consider building a linear model for predicting drug resistance
 ```{r}
 get_name<-function(x){return(outer(x["Position"], unlist(strsplit(x["Mutations"], split =" ")), function(...) paste(..., sep=".")))}
 mutation_name <- unlist(apply(tsm_df, 1, get_name))
-#mutation_name <- paste("P", unlist(apply(tsm_df, 1, get_name)), sep="")
+# mutation_name <- paste("P", unlist(apply(tsm_df, 1, get_name)), sep="")
 col_index <- which(colnames(X) %in% mutation_name)
 candidate_X <- X[, col_index]
 ```
@@ -746,6 +750,8 @@ MSE <- mean(summary(final_model)$residuals^2)
 cat("Mean Square Prediction Error (MSPR):", MSPR, "\n")
 cat("Mean Square Error (MSE):", MSE, "\n")
 ```
+
+The output is 
 
 ```{r}
 Call:
