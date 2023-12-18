@@ -7,7 +7,7 @@ gene_df = read.delim(gene_url, na.string = c('NA', ''), stringsAsFactors = FALSE
 tsm_df = read.delim(tsm_url, header = FALSE, stringsAsFactors = FALSE)
 names(tsm_df) = c('Position', 'Mutations')
 </code></pre> <p>A small sample of the data is shown below.</p> <pre><code class="language-{r}">head(gene_df, n=6)
-</code></pre> <table> <thead> <tr class="header"> <th align="right">APV</th> <th align="right">ATV</th> <th align="right">IDV</th> <th align="right">LPV</th> <th align="right">NFV</th> <th align="right">RTV</th> <th align="right">SQV</th> <th align="left">P1</th> <th align="left">P2</th> <th align="left">P3</th> <th align="left">P4</th> <th align="left">P5</th> <th align="left">P6</th> <th align="left">P7</th> <th align="left">P8</th> <th align="left">P9</th> <th align="left">P10</th> </tr> </thead> <tbody> <tr class="odd"> <td align="right">2.3</td> <td align="right">NA</td> <td align="right">32.7</td> <td align="right">NA</td> <td align="right">23.4</td> <td align="right">51.6</td> <td align="right">37.8</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">I</td> </tr> <tr class="even"> <td align="right">76.0</td> <td align="right">NA</td> <td align="right">131.0</td> <td align="right">200.0</td> <td align="right">50.0</td> <td align="right">200.0</td> <td align="right">156.0</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">F</td> </tr> <tr class="odd"> <td align="right">2.8</td> <td align="right">NA</td> <td align="right">12.0</td> <td align="right">NA</td> <td align="right">100.0</td> <td align="right">41.0</td> <td align="right">145.6</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> </tr> <tr class="even"> <td align="right">6.5</td> <td align="right">9.2</td> <td align="right">2.1</td> <td align="right">5.3</td> <td align="right">5.0</td> <td align="right">36.0</td> <td align="right">13.0</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">I</td> </tr> <tr class="odd"> <td align="right">8.3</td> <td align="right">NA</td> <td align="right">100.0</td> <td align="right">NA</td> <td align="right">161.1</td> <td align="right">170.2</td> <td align="right">100.0</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">I</td> </tr> <tr class="even"> <td align="right">82.0</td> <td align="right">75.0</td> <td align="right">400.0</td> <td align="right">400.0</td> <td align="right">91.0</td> <td align="right">400.0</td> <td align="right">400.0</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">I</td> </tr> </tbody> </table> <pre><code class="language-{r}">head(tsm_df, n=6)
+</code></pre> <table> <thead> <tr class="header"> <th align="right">APV</th> <th align="right">ATV</th> <th align="right">IDV</th> <th align="right">LPV</th> <th align="right">NFV</th> <th align="right">RTV</th> <th align="right">SQV</th> <th align="left">P1</th> <th align="left">P2</th> <th align="left">P3</th> <th align="left">P4</th> <th align="left">P5</th> <th align="left">P6</th> <th align="left">P7</th> <th align="left">P8</th> <th align="left">P9</th> <th align="left">P10</th> </tr> </thead> <tbody> <tr class="odd"> <td align="right">2.3</td> <td align="right">NA</td> <td align="right">32.7</td> <td align="right">NA</td> <td align="right">23.4</td> <td align="right">51.6</td> <td align="right">37.8</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">I</td> </tr> <tr class="even"> <td align="right">76.0</td> <td align="right">NA</td> <td align="right">131.0</td> <td align="right">200.0</td> <td align="right">50.0</td> <td align="right">200.0</td> <td align="right">156.0</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">F</td> </tr> <tr class="odd"> <td align="right">2.8</td> <td align="right">NA</td> <td align="right">12.0</td> <td align="right">NA</td> <td align="right">100.0</td> <td align="right">41.0</td> <td align="right">145.6</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> </tr> <tr class="even"> <td align="right">6.5</td> <td align="right">9.2</td> <td align="right">2.1</td> <td align="right">5.3</td> <td align="right">5.0</td> <td align="right">36.0</td> <td align="right">13.0</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">I</td> </tr> <tr class="odd"> <td align="right">8.3</td> <td align="right">NA</td> <td align="right">100.0</td> <td align="right">NA</td> <td align="right">161.1</td> <td align="right">170.2</td> <td align="right">100.0</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">I</td> </tr> <tr class="even"> <td align="right">82.0</td> <td align="right">75.0</td> <td align="right">400.0</td> <td align="right">400.0</td> <td align="right">91.0</td> <td align="right">400.0</td> <td align="right">400.0</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">-</td> <td align="left">I</td> </tr> </tbody> </table> <p>\</p> <pre><code class="language-{r}">head(tsm_df, n=6)
 </code></pre> <table> <thead> <tr class="header"> <th align="right">Position</th> <th align="left">Mutations</th> </tr> </thead> <tbody> <tr class="odd"> <td align="right">10</td> <td align="left">F R</td> </tr> <tr class="even"> <td align="right">11</td> <td align="left">I</td> </tr> <tr class="odd"> <td align="right">20</td> <td align="left">I T V</td> </tr> <tr class="even"> <td align="right">23</td> <td align="left">I</td> </tr> <tr class="odd"> <td align="right">24</td> <td align="left">I</td> </tr> <tr class="even"> <td align="right">30</td> <td align="left">N</td> </tr> </tbody> </table> <p>In <code class="language-plaintext highlighter-rouge">tsm_df</code>, the variable <code class="language-plaintext highlighter-rouge">Position</code> denotes the position of the mutations that are associated with drug-resistance, while <code class="language-plaintext highlighter-rouge">Mutations</code> indicating the mutation type.</p> <p>The gene data table has some rows with error flags or nonstandard mutation codes. For simplicity, we remove all such rows.</p> <pre><code class="language-{r}"># Returns rows for which every column matches the given regular expression.
 grepl_rows &lt;- function(pattern, df) {
   cell_matches = apply(df, c(1,2), function(x) grepl(pattern, x))
@@ -18,7 +18,7 @@ pos_start = which(names(gene_df) == 'P1')
 pos_cols = seq.int(pos_start, ncol(gene_df))
 valid_rows = grepl_rows('^(\\.|-|[A-Zid]+)$', gene_df[,pos_cols])
 gene_df = gene_df[valid_rows,]
-</code></pre> <h2 id="preparing-the-regression-matrix">Preparing the regression matrix</h2> <p>We now construct the design matrix \(X\) and matrix of response vectors \(Y\). The features (columns of \(X\)) are given by mutation/position pairs. Define</p> \[X_{i,j} = 1 \text{ if the } i \text{th patient has the } j \text{th mutation/position pair and 0 otherwise}\\ Y_{i,k} = \text{resistance of patient } i \text{ to drug } k.\] <p>For example, in the sample for PI type drugs, three different mutations (A, C, and D) are observed at position 63 in the protease, and so three columns of $X$ (named P63.A, P63.C, and P63.D) indicate the presence or absence of each mutation at this position.</p> <pre><code class="language-{r}"># Flatten a matrix to a vector with names from concatenating row/column names.
+</code></pre> <h2 id="preparing-the-regression-matrix">Preparing the regression matrix</h2> <p>We now construct the design matrix \(X\) and matrix of response vectors \(Y\). The features (columns of \(X\)) are given by mutation/position pairs. Define</p> \[X_{i,j} = 1 \text{ if the } i \text{th patient has the } j \text{th mutation/position pair and 0 otherwise}\] \[Y_{i,k} = \text{resistance of patient } i \text{ to drug } k.\] <p>For example, in the sample for PI type drugs, three different mutations (A, C, and D) are observed at position 63 in the protease, and so three columns of $X$ (named P63.A, P63.C, and P63.D) indicate the presence or absence of each mutation at this position.</p> <pre><code class="language-{r}"># Flatten a matrix to a vector with names from concatenating row/column names.
 flatten_matrix &lt;- function(M, sep='.') {
   x &lt;- c(M)
   names(x) &lt;- c(outer(rownames(M), colnames(M),
@@ -39,4 +39,205 @@ X = X[,colSums(X) != 0]
 
 # Extract response matrix.
 Y = gene_df[,4:(pos_start-1)]
-</code></pre> </article> </div> </div> <footer class="fixed-bottom"> <div class="container mt-0"> © Copyright 2023 Jiazhi He. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>. </div> </footer> <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> <script src="/assets/js/bootstrap.bundle.min.js"></script> <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@4/imagesloaded.pkgd.min.js"></script> <script defer src="/assets/js/masonry.js" type="text/javascript"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.8/dist/medium-zoom.min.js" integrity="sha256-7PhEpEWEW0XXQ0k6kQrPKwuoIomz8R8IYyuU1Qew4P8=" crossorigin="anonymous"></script> <script defer src="/assets/js/zoom.js?7b30caa5023af4af8408a472dc4e1ebb"></script> <script defer src="https://unpkg.com/bootstrap-table@1.22.1/dist/bootstrap-table.min.js"></script> <script src="/assets/js/no_defer.js?d633890033921b33e0ceb13d22340a9c"></script> <script defer src="/assets/js/common.js?acdb9690d7641b2f8d40529018c71a01"></script> <script defer src="/assets/js/copy_code.js?c9d9dd48933de3831b3ee5ec9c209cac" type="text/javascript"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script type="text/javascript">window.MathJax={tex:{tags:"ams"}};</script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script> <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> <script type="text/javascript">function progressBarSetup(){"max"in document.createElement("progress")?(initializeProgressElement(),$(document).on("scroll",function(){progressBar.attr({value:getCurrentScrollPosition()})}),$(window).on("resize",initializeProgressElement)):(resizeProgressBar(),$(document).on("scroll",resizeProgressBar),$(window).on("resize",resizeProgressBar))}function getCurrentScrollPosition(){return $(window).scrollTop()}function initializeProgressElement(){let e=$("#navbar").outerHeight(!0);$("body").css({"padding-top":e}),$("progress-container").css({"padding-top":e}),progressBar.css({top:e}),progressBar.attr({max:getDistanceToScroll(),value:getCurrentScrollPosition()})}function getDistanceToScroll(){return $(document).height()-$(window).height()}function resizeProgressBar(){progressBar.css({width:getWidthPercentage()+"%"})}function getWidthPercentage(){return getCurrentScrollPosition()/getDistanceToScroll()*100}const progressBar=$("#progress");window.onload=function(){setTimeout(progressBarSetup,50)};</script> </body> </html>
+</code></pre> <p>An excerpt of the design matrix is shown below. By construction, every column contains at least one 1, but the matrix is still quite sparse with the relative frequency of 1’s being about 0.025.</p> <pre><code class="language-{r}">library(DT)
+datatable(data.frame(X)[1:10, ], options = list(scrollX=T, pageLength = 10))
+</code></pre> <table> <thead> <tr class="header"> <th align="right">P4.A</th> <th align="right">P12.A</th> <th align="right">P13.A</th> <th align="right">P16.A</th> <th align="right">P20.A</th> <th align="right">P22.A</th> <th align="right">P28.A</th> <th align="right">P37.A</th> <th align="right">P51.A</th> <th align="right">P54.A</th> </tr> </thead> <tbody> <tr class="odd"> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> </tr> <tr class="even"> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">1</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> </tr> <tr class="odd"> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> </tr> <tr class="even"> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> </tr> <tr class="odd"> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> </tr> <tr class="even"> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> </tr> <tr class="odd"> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> </tr> <tr class="even"> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">1</td> <td align="right">0</td> <td align="right">0</td> </tr> <tr class="odd"> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">1</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> </tr> <tr class="even"> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> <td align="right">0</td> </tr> </tbody> </table> <p>The response matrix looks like:</p> <pre><code class="language-{r}">head(Y, n=6)
+</code></pre> <p>There are 7 PI-type drugs: APV, ATV, IDV, LPV, NFV, RTV, and SQV.</p> <table> <thead> <tr class="header"> <th align="right">APV</th> <th align="right">ATV</th> <th align="right">IDV</th> <th align="right">LPV</th> <th align="right">NFV</th> <th align="right">RTV</th> <th align="right">SQV</th> </tr> </thead> <tbody> <tr class="odd"> <td align="right">2.3</td> <td align="right">NA</td> <td align="right">32.7</td> <td align="right">NA</td> <td align="right">23.4</td> <td align="right">51.6</td> <td align="right">37.8</td> </tr> <tr class="even"> <td align="right">76.0</td> <td align="right">NA</td> <td align="right">131.0</td> <td align="right">200.0</td> <td align="right">50.0</td> <td align="right">200.0</td> <td align="right">156.0</td> </tr> <tr class="odd"> <td align="right">2.8</td> <td align="right">NA</td> <td align="right">12.0</td> <td align="right">NA</td> <td align="right">100.0</td> <td align="right">41.0</td> <td align="right">145.6</td> </tr> <tr class="even"> <td align="right">6.5</td> <td align="right">9.2</td> <td align="right">2.1</td> <td align="right">5.3</td> <td align="right">5.0</td> <td align="right">36.0</td> <td align="right">13.0</td> </tr> <tr class="odd"> <td align="right">8.3</td> <td align="right">NA</td> <td align="right">100.0</td> <td align="right">NA</td> <td align="right">161.1</td> <td align="right">170.2</td> <td align="right">100.0</td> </tr> <tr class="even"> <td align="right">82.0</td> <td align="right">75.0</td> <td align="right">400.0</td> <td align="right">400.0</td> <td align="right">91.0</td> <td align="right">400.0</td> <td align="right">400.0</td> </tr> </tbody> </table> <h2 id="selecting-drug-resistance-associated-mutations">Selecting drug-resistance-associated mutations</h2> <p>In this step, I impose a linear regression model, and use the method I learned in lecture to select mutations that may associated with drug-resistance. For 7 PI-type drugs, I run a separate analysis for each drug.</p> <p>Notice that there are some missing values.</p> <p>Before selecting associated mutations, we need to perform some final pre-processing steps. We remove rows with missing values (which vary from drug to drug) and we then further reduce the design matrix by removing predictor columns for mutations that do not appear at least three times in the sample. Finally, for identifiability, we remove any columns that are duplicates (i.e. two mutations that appear only in tandem, and therefore we cannot distinguish between their effects on the response).</p> <p>A quick inspection of the response vector shows that it is highly non-Gaussian.</p> <pre><code class="language-{r}">hist(Y[,1], breaks='FD')
+</code></pre> <div class="row"> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/apply1_2-480.webp"></source> <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/apply1_2-800.webp"></source> <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/apply1_2-1400.webp"></source> <img src="/assets/img/apply1_2.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"> </picture> </figure> </div> </div> <p>A log-transform seems to help considerably, so we will use the log-transformed drug resistancement measurements below.</p> <pre><code class="language-{r}">hist(log(Y[,1]), breaks='FD')
+</code></pre> <div class="row"> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/apply1_3-480.webp"></source> <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/apply1_3-800.webp"></source> <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/apply1_3-1400.webp"></source> <img src="/assets/img/apply1_3.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"> </picture> </figure> </div> </div> <pre><code class="language-{r}">selection &lt;- function (X, y, alpha) {
+  # Remove patients with missing measurements.
+  missing = is.na(y)
+  y = y[!missing]
+  X = X[!missing,]
+    
+  # Remove predictors that appear less than 3 times.
+  X = X[,colSums(X) &gt;= 3]
+  
+  # Remove duplicate predictors.
+  X = X[,colSums(abs(cor(X)-1) &lt; 1e-4) == 1]
+  
+  # Based on an appropriate linear regression model
+  # Select the mutations that may associated with drug-resistance
+  y_log &lt;- log(y)
+  data &lt;- as.data.frame(cbind(y_log, X))
+  model &lt;- lm(y_log ~ . , data = data)
+  # Extract p-values for each predictor
+  p_values &lt;- summary(model)$coef[, "Pr(&gt;|t|)"]
+  
+  # Adjust p-values for controlling the FWER using Bonferroni correction
+  adjusted_p_values &lt;- p.adjust(p_values, method = "bonferroni")
+  
+  # Select mutations with adjusted p-values below the alpha threshold
+  selected_mutations &lt;- names(which(adjusted_p_values &lt; alpha))
+  selected_mutations &lt;- selected_mutations[-1]
+  return(selected_mutations)
+}
+
+alpha = 0.05 # the nominal FWER
+# Create a vector with the names of PI-type drugs
+pi_drug_names &lt;- c("APV", "ATV", "IDV", "LPV", "NFV", "RTV", "SQV")
+results = lapply(Y, function(y) selection(X, y, alpha))
+for(i in 1:7){
+cat(pi_drug_names[i], ":", results[[i]], "\n\n")}
+</code></pre> <pre><code class="language-{r}">APV : P84.A P84.C P10.F P33.F P82.F P10.I P46.I P50.L P54.L P54.M P90.M P88.S P10.V P47.V P50.V P76.V P84.V 
+
+ATV : P90.M P73.S P88.S P20.T P48.V P54.V P76.V P84.V 
+
+IDV : P54.A P82.A P84.A P84.C P10.F P82.F P10.I P20.I P24.I P46.I P50.L P48.M P90.M P54.S P73.S P88.S P54.T P73.T P82.T P48.V P54.V P71.V P76.V P84.V 
+
+LPV : P82.A P84.A P10.F P33.F P82.F P10.I P46.I P50.L P48.M P82.S P54.T P47.V P48.V P50.V P54.V P76.V P84.V 
+
+NFV : P84.C P10.F P82.F P10.I P20.I P24.I P46.I P50.L P54.M P90.M P30.N P63.P P73.S P74.S P88.S P20.T P54.T P73.T P48.V P54.V P71.V P84.V 
+
+RTV : P82.A P84.A P84.C P33.F P82.F P24.I P46.I P50.L P90.M P63.P P82.S P20.T P54.T P82.T P48.V P50.V P54.V P84.V 
+
+SQV : P82.A P84.A P84.C P88.D P10.F P82.F P10.I P20.I P24.I P10.L P50.L P53.L P48.M P90.M P54.S P73.S P88.S P54.T P48.V P54.V P71.V P76.V P84.V 
+</code></pre> <h2 id="evaluating-the-results">Evaluating the results</h2> <p>In this case, we are fortunate enough to have a “ground truth” obtained by another experiment (data saved as <code class="language-plaintext highlighter-rouge">tsm_df</code>). Using this, we can evaluate the selected results. Note that we only need to compare the position of the mutations, not the mutation type. This is because it is known that multiple mutations at the same protease or RT position can often be associated with related drug-resistance outcomes.</p> <pre><code class="language-{r}"># Evaluate the result by comparing it to the ground true
+# Create a vector with the names of PI-type drugs
+pi_drug_names &lt;- c("APV", "ATV", "IDV", "LPV", "NFV", "RTV", "SQV")
+# Function to extract positions from mutation strings
+get_positions &lt;- function(mutations) {
+  unique(sapply(strsplit(mutations, "\\."), "[", 1))
+}
+# Prepend "P" to tsm_df$Position for comparison
+tsm_df$Position &lt;- paste("P", tsm_df$Position, sep = "")
+# Evaluate the result for each PI-type drug
+for (i in seq_along(Y)) {
+  selected_mutations &lt;- results[[i]]
+  
+  if (!is.null(selected_mutations)) {
+    # Get the positions from selected mutations
+    selected_positions &lt;- get_positions(selected_mutations)
+    
+    # Get the positions from the ground truth for the corresponding drug
+    true_positions &lt;- tsm_df$Position[tsm_df$Position %in% selected_positions]
+    
+    # Calculate the overlap between selected and true positions
+    overlap &lt;- length(intersect(selected_positions, true_positions))
+    
+    # Output the evaluation metrics
+    cat("Drug:", pi_drug_names[i], "\n")
+    cat("Selected Positions:", selected_positions, "\n")
+    cat("True Positions:", true_positions, "\n")
+    cat("Overlap:", overlap, "\n")
+    cat("Precision:", overlap / length(selected_positions), "\n")
+    cat("Recall:", overlap / length(true_positions), "\n")
+    cat("------------------------------\n")
+  }
+}
+</code></pre> <pre><code class="language-{r}">Drug: APV 
+Selected Positions: P84 P10 P33 P82 P46 P50 P54 P90 P88 P47 P76 
+True Positions: P10 P33 P46 P47 P50 P54 P76 P82 P84 P88 P90 
+Overlap: 11 
+Precision: 1 
+Recall: 1 
+------------------------------
+Drug: ATV 
+Selected Positions: P90 P73 P88 P20 P48 P54 P76 P84 
+True Positions: P20 P48 P54 P73 P76 P84 P88 P90 
+Overlap: 8 
+Precision: 1 
+Recall: 1 
+------------------------------
+Drug: IDV 
+Selected Positions: P54 P82 P84 P10 P20 P24 P46 P50 P48 P90 P73 P88 P71 P76 
+True Positions: P10 P20 P24 P46 P48 P50 P54 P71 P73 P76 P82 P84 P88 P90 
+Overlap: 14 
+Precision: 1 
+Recall: 1 
+------------------------------
+Drug: LPV 
+Selected Positions: P82 P84 P10 P33 P46 P50 P48 P54 P47 P76 
+True Positions: P10 P33 P46 P47 P48 P50 P54 P76 P82 P84 
+Overlap: 10 
+Precision: 1 
+Recall: 1 
+------------------------------
+Drug: NFV 
+Selected Positions: P84 P10 P82 P20 P24 P46 P50 P54 P90 P30 P63 P73 P74 P88 P48 P71 
+True Positions: P10 P20 P24 P30 P46 P48 P50 P54 P71 P73 P74 P82 P84 P88 P90 
+Overlap: 15 
+Precision: 0.9375 
+Recall: 1 
+------------------------------
+Drug: RTV 
+Selected Positions: P82 P84 P33 P24 P46 P50 P90 P63 P20 P54 P48 
+True Positions: P20 P24 P33 P46 P48 P50 P54 P82 P84 P90 
+Overlap: 10 
+Precision: 0.9090909 
+Recall: 1 
+------------------------------
+Drug: SQV 
+Selected Positions: P82 P84 P88 P10 P20 P24 P50 P53 P48 P90 P54 P73 P71 P76 
+True Positions: P10 P20 P24 P48 P50 P53 P54 P71 P73 P76 P82 P84 P88 P90 
+Overlap: 14 
+Precision: 1 
+Recall: 1 
+------------------------------
+</code></pre> <h2 id="building-a-linear-model-for-prediction">Building a linear model for prediction</h2> <p>In this part, we consider building a linear model for predicting drug resistance to APV. We extract all mutations at those positions provided by the file <code class="language-plaintext highlighter-rouge">tsm_df</code>.</p> <pre><code class="language-{r}">get_name&lt;-function(x){return(outer(x["Position"], unlist(strsplit(x["Mutations"], split =" ")), function(...) paste(..., sep=".")))}
+mutation_name &lt;- unlist(apply(tsm_df, 1, get_name))
+#mutation_name &lt;- paste("P", unlist(apply(tsm_df, 1, get_name)), sep="")
+col_index &lt;- which(colnames(X) %in% mutation_name)
+candidate_X &lt;- X[, col_index]
+</code></pre> <p>We need to build a model by using candidate explanatory variables provided by <code class="language-plaintext highlighter-rouge">candidate_X</code> above. Build a model for prediction with an appropriate model selection criterion, which can be either AIC, BIC, or leave-one-out cross-validation error.</p> <pre><code class="language-{r}">library(leaps)
+# Model selection and prediction
+# Set the seed for reproducibility
+set.seed(10086)
+
+# Remove missing value
+missing &lt;- is.na(Y[,"APV"])
+Y &lt;- Y[!missing,]
+candidate_X &lt;- candidate_X[!missing,]
+
+# Remove predictors that appear less than 3 times.
+candidate_X = candidate_X[,colSums(candidate_X) &gt;= 3]
+  
+# Remove duplicate predictors.
+candidate_X = candidate_X[,colSums(abs(cor(candidate_X)-1) &lt; 1e-4) == 1]
+
+# Split the data into training and testing sets
+n &lt;- nrow(candidate_X)
+train_indices &lt;- sample(1:n, round(0.7 * n))  # 70% for training
+test_indices &lt;- setdiff(1:n, train_indices)
+
+# Create training and testing datasets
+train_X &lt;- as.data.frame(candidate_X[train_indices, ])
+test_X &lt;- candidate_X[test_indices, ]
+train_y &lt;- Y[train_indices, "APV"]
+test_y &lt;- Y[test_indices, "APV"]
+log_train_y &lt;- log(train_y)
+log_test_y &lt;- log(test_y)
+
+# Build a linear regression model using forward stepwise selection 
+model &lt;- regsubsets(log_train_y ~ ., data = cbind(log_train_y,train_X), method = "forward")
+# Get the best model based on the BIC criterion
+best_model_index &lt;- which.min(summary(model)$bic)
+selected_predictors &lt;- names(coef(model, id = best_model_index))
+selected_predictors &lt;- selected_predictors[-1]
+
+# Build the final linear regression model using the selected predictors
+final_model &lt;- lm(log_train_y ~ ., data = as.data.frame(train_X[, c(selected_predictors)]))
+final_model
+# Predict drug resistance on the test set using the final model
+predictions &lt;- predict(final_model, newdata = as.data.frame(test_X[, c(selected_predictors)]))
+
+# Evaluate the model
+MSPR &lt;- mean((predictions - log_test_y)^2)
+MSE &lt;- mean(summary(final_model)$residuals^2)
+
+# Output evaluation metrics
+cat("Mean Square Prediction Error (MSPR):", MSPR, "\n")
+cat("Mean Square Error (MSE):", MSE, "\n")
+</code></pre> <pre><code class="language-{r}">Call:
+lm(formula = log_train_y ~ ., data = as.data.frame(train_X[, 
+    c(selected_predictors)]))
+
+Coefficients:
+(Intercept)        P82.A        P84.A        P33.F        P46.I  
+    -0.2474       0.9822       3.2157       1.3097       0.8561  
+      P90.M        P88.S        P50.V        P84.V  
+     0.7603      -1.8503       2.2609       1.0575  
+
+Mean Square Prediction Error (MSPR): 0.8408786 
+Mean Square Error (MSE): 0.7267954 
+</code></pre> <p>MSPR is close to MSE, which indicates that the model is valid.</p> <h2 id="references">References</h2> <p>Rhee, Soo-Yon, W Jeffrey Fessel, Andrew R Zolopa, Leo Hurley, Tommy Liu, Jonathan Taylor, Dong Phuong Nguyen, et al. 2005. “HIV-1 Protease and Reverse-Transcriptase Mutations: correlations with Antiretroviral Therapy in Subtype B Isolates and Implications for Drug-Resistance Surveillance.” <em>Journal of Infectious Diseases 192 (3). Oxford University Press: 456–65</em>.</p> <p>Rhee, Soo-Yon, Jonathan Taylor, Gauhar Wadhera, Asa Ben-Hur, Douglas L Brutlag, and Robert W Shafer. 2006. “Genotypic Predictors of Human Immunodeficiency Virus Type 1 Drug Resistance.” <em>Proceedings of the National Academy of Sciences 103 (46). National Academy of Sciences: 17355–60</em>.</p> </article> </div> </div> <footer class="fixed-bottom"> <div class="container mt-0"> © Copyright 2023 Jiazhi He. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>. </div> </footer> <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> <script src="/assets/js/bootstrap.bundle.min.js"></script> <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@4/imagesloaded.pkgd.min.js"></script> <script defer src="/assets/js/masonry.js" type="text/javascript"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.8/dist/medium-zoom.min.js" integrity="sha256-7PhEpEWEW0XXQ0k6kQrPKwuoIomz8R8IYyuU1Qew4P8=" crossorigin="anonymous"></script> <script defer src="/assets/js/zoom.js?7b30caa5023af4af8408a472dc4e1ebb"></script> <script defer src="https://unpkg.com/bootstrap-table@1.22.1/dist/bootstrap-table.min.js"></script> <script src="/assets/js/no_defer.js?d633890033921b33e0ceb13d22340a9c"></script> <script defer src="/assets/js/common.js?acdb9690d7641b2f8d40529018c71a01"></script> <script defer src="/assets/js/copy_code.js?c9d9dd48933de3831b3ee5ec9c209cac" type="text/javascript"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script type="text/javascript">window.MathJax={tex:{tags:"ams"}};</script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script> <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> <script type="text/javascript">function progressBarSetup(){"max"in document.createElement("progress")?(initializeProgressElement(),$(document).on("scroll",function(){progressBar.attr({value:getCurrentScrollPosition()})}),$(window).on("resize",initializeProgressElement)):(resizeProgressBar(),$(document).on("scroll",resizeProgressBar),$(window).on("resize",resizeProgressBar))}function getCurrentScrollPosition(){return $(window).scrollTop()}function initializeProgressElement(){let e=$("#navbar").outerHeight(!0);$("body").css({"padding-top":e}),$("progress-container").css({"padding-top":e}),progressBar.css({top:e}),progressBar.attr({max:getDistanceToScroll(),value:getCurrentScrollPosition()})}function getDistanceToScroll(){return $(document).height()-$(window).height()}function resizeProgressBar(){progressBar.css({width:getWidthPercentage()+"%"})}function getWidthPercentage(){return getCurrentScrollPosition()/getDistanceToScroll()*100}const progressBar=$("#progress");window.onload=function(){setTimeout(progressBarSetup,50)};</script> </body> </html>
