@@ -34,3 +34,145 @@ gene_df = read.delim(gene_url, na.string = c('NA', ''), stringsAsFactors = FALSE
 tsm_df = read.delim(tsm_url, header = FALSE, stringsAsFactors = FALSE)
 names(tsm_df) = c('Position', 'Mutations')
 ```
+
+A small sample of the data is shown below.
+
+<table>
+<thead>
+<tr class="header">
+<th align="right">APV</th>
+<th align="right">ATV</th>
+<th align="right">IDV</th>
+<th align="right">LPV</th>
+<th align="right">NFV</th>
+<th align="right">RTV</th>
+<th align="right">SQV</th>
+<th align="left">P1</th>
+<th align="left">P2</th>
+<th align="left">P3</th>
+<th align="left">P4</th>
+<th align="left">P5</th>
+<th align="left">P6</th>
+<th align="left">P7</th>
+<th align="left">P8</th>
+<th align="left">P9</th>
+<th align="left">P10</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">2.3</td>
+<td align="right">NA</td>
+<td align="right">32.7</td>
+<td align="right">NA</td>
+<td align="right">23.4</td>
+<td align="right">51.6</td>
+<td align="right">37.8</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">I</td>
+</tr>
+<tr class="even">
+<td align="right">76.0</td>
+<td align="right">NA</td>
+<td align="right">131.0</td>
+<td align="right">200.0</td>
+<td align="right">50.0</td>
+<td align="right">200.0</td>
+<td align="right">156.0</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">F</td>
+</tr>
+<tr class="odd">
+<td align="right">2.8</td>
+<td align="right">NA</td>
+<td align="right">12.0</td>
+<td align="right">NA</td>
+<td align="right">100.0</td>
+<td align="right">41.0</td>
+<td align="right">145.6</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+</tr>
+<tr class="even">
+<td align="right">6.5</td>
+<td align="right">9.2</td>
+<td align="right">2.1</td>
+<td align="right">5.3</td>
+<td align="right">5.0</td>
+<td align="right">36.0</td>
+<td align="right">13.0</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">I</td>
+</tr>
+<tr class="odd">
+<td align="right">8.3</td>
+<td align="right">NA</td>
+<td align="right">100.0</td>
+<td align="right">NA</td>
+<td align="right">161.1</td>
+<td align="right">170.2</td>
+<td align="right">100.0</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">I</td>
+</tr>
+<tr class="even">
+<td align="right">82.0</td>
+<td align="right">75.0</td>
+<td align="right">400.0</td>
+<td align="right">400.0</td>
+<td align="right">91.0</td>
+<td align="right">400.0</td>
+<td align="right">400.0</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">I</td>
+</tr>
+</tbody>
+</table>
