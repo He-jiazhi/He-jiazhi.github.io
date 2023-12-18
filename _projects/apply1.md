@@ -37,6 +37,10 @@ names(tsm_df) = c('Position', 'Mutations')
 
 A small sample of the data is shown below.
 
+```{r}
+head(gene_df, n=6)
+```
+
 <table>
 <thead>
 <tr class="header">
@@ -176,3 +180,95 @@ A small sample of the data is shown below.
 </tr>
 </tbody>
 </table>
+
+```{r}
+head(tsm_df, n=6)
+```
+
+<table>
+<thead>
+<tr class="header">
+<th align="right">Position</th>
+<th align="left">Mutations</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">10</td>
+<td align="left">F R</td>
+</tr>
+<tr class="even">
+<td align="right">11</td>
+<td align="left">I</td>
+</tr>
+<tr class="odd">
+<td align="right">20</td>
+<td align="left">I T V</td>
+</tr>
+<tr class="even">
+<td align="right">23</td>
+<td align="left">I</td>
+</tr>
+<tr class="odd">
+<td align="right">24</td>
+<td align="left">I</td>
+</tr>
+<tr class="even">
+<td align="right">30</td>
+<td align="left">N</td>
+</tr>
+</tbody>
+</table>
+
+In `tsm_df`, the variable `Position` denotes the position of the mutations that are associated with drug-resistance, while `Mutations` indicating the mutation type.
+
+The gene data table has some rows with error flags or nonstandard mutation codes. For simplicity, we remove all such rows.
+
+```{r}
+# Returns rows for which every column matches the given regular expression.
+grepl_rows <- function(pattern, df) {
+  cell_matches = apply(df, c(1,2), function(x) grepl(pattern, x))
+  apply(cell_matches, 1, all)
+}
+
+pos_start = which(names(gene_df) == 'P1')
+pos_cols = seq.int(pos_start, ncol(gene_df))
+valid_rows = grepl_rows('^(\\.|-|[A-Zid]+)$', gene_df[,pos_cols])
+gene_df = gene_df[valid_rows,]
+```
+
+## Preparing the regression matrix
+
+We now construct the design matrix $$ X $$ and matrix of response vectors $$ Y $$. The features (columns of $$ X $$) are given by mutation/position pairs. Define
+
+$$
+ X_{i,j} = 1 \text{ if the } i \text{th patient has the } j \text{th mutation/position pair and 0 otherwise}\\
+ 
+ Y_{i,k} = \text{resistance of patient } i \text{ to drug } k. 
+$$
+
+For example, in the sample for PI type drugs, three different mutations (A, C, and D) are observed at position 63 in the protease, and so three columns of $X$ (named P63.A, P63.C, and P63.D) indicate the presence or absence of each mutation at this position.
+
+```{r}
+# Flatten a matrix to a vector with names from concatenating row/column names.
+flatten_matrix <- function(M, sep='.') {
+  x <- c(M)
+  names(x) <- c(outer(rownames(M), colnames(M),
+                      function(...) paste(..., sep=sep)))
+  x
+}
+
+# Construct preliminary design matrix.
+muts = c(LETTERS, 'i', 'd')
+X = outer(muts, as.matrix(gene_df[,pos_cols]), Vectorize(grepl))
+X = aperm(X, c(2,3,1))
+dimnames(X)[[3]] <- muts
+X = t(apply(X, 1, flatten_matrix))
+mode(X) <- 'numeric'
+
+# Remove any mutation/position pairs that never appear in the data.
+X = X[,colSums(X) != 0]
+
+# Extract response matrix.
+Y = gene_df[,4:(pos_start-1)]
+```
