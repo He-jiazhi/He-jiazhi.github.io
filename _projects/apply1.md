@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Analysis of      HIV Drug Resistance 
+title: Analysis of HIV Drug Resistance 
 description: STAT 2131 Course Final Project at Pitt
 img: assets/img/apply1_1.png
 importance: 1
