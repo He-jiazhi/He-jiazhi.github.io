@@ -31,11 +31,11 @@
 - title: Experience
   type: time_table
   contents:
-    - title: Undergraduate Research Assistant
-      institution: University of Science and Technology of China (USTC)
+    - title: Research Assistant
+      institution: University of Pittsburgh
       year: 2022
       description:
-        - Make Evaluation of personal health status in cloud medical and big data environment.
+        - Applied Q-learning methods to evaluate optimal dynamic treatment regimes (DTRs) in a longitudinal behavioral intervention study (HABIT), targeting improvements in postpartum weight, cardiometabolic health, depressive symptoms, and stress.
         - # Description 2.
         - title: # Description 3.
           contents:

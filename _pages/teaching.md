@@ -9,6 +9,12 @@ nav_order: 4
 
 ### University of Pittsburgh
 
+- Spring 2025, teaching assistant for `Applied Statistical Methods (STAT 1000)` (Instructor: [Ruth Mihalyi](https://www.stat.pitt.edu/people/ruth-mihalyi)).
+
+- Fall 2024, teaching assistant for `Data Science Foundations (STAT 1060)` (Instructor: [Dr. Nikolas Siapoutis](https://www.stat.pitt.edu/people/nikolas-siapoutis)).
+
+- Spring 2024, teaching assistant for `Applied Statistical Methods (STAT 1000)` (Instructor: Dr. Sarah Quesen).
+
 - Fall 2023, teaching assistant for `Applied Nonparametric Statistics (STAT 1201/2200)` (Instructor: [Dr. Yeon-Jung Seo](https://www.stat.pitt.edu/people/yeon-jung-seo)) and `Statistics in the Modern World (STAT 0800)` (Instructor: [Ruth Mihalyi](https://www.stat.pitt.edu/people/ruth-mihalyi))
 
 ### University of Science and Technology of China
