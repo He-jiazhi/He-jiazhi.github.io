@@ -22,16 +22,7 @@
       }
     ]
   },
-  "work": [
-    {
-      "name": "University of Pittsburgh",
-      "position": "Research Assistant",
-      "url": "",
-      "startDate": "2025-01",
-      "endDate": "Present",
-      "summary": ""
-    }
-  ],
+  "work": [],
   "volunteer": [],
   "education": [
     {
@@ -55,28 +46,10 @@
   ],
   "awards": [
     {
-      "title": "Outstanding Volunteer Award",
-      "date": "2021",
-      "awarder": "University of Science and Technology of China",
-      "summary": ""
-    },
-    {
       "title": "Outstanding Student Scholarship, Silver Award",
       "date": "2020",
       "awarder": "University of Science and Technology of China",
       "summary": "Top 10%"
-    },
-    {
-      "title": "Outstanding Academic Progress Scholarship",
-      "date": "2020",
-      "awarder": "University of Science and Technology of China",
-      "summary": ""
-    },
-    {
-      "title": "Outstanding Freshmen Scholarship, Bronze Award",
-      "date": "2019",
-      "awarder": "University of Science and Technology of China",
-      "summary": "Top 20%"
     },
     {
       "title": "National High School Mathematics League, Second Prize in Anhui Province",
